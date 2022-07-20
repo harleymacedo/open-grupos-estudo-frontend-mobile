@@ -4,6 +4,8 @@ const Login = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.texto1}>Entrar no sistema</Text>
+            <TextInput placeholder='Usuário' />
+            <TextInput placeholder='Senha' />
         </View>
     )
 }
@@ -11,8 +13,8 @@ const Login = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'slategray',
-        height: 300,
-        width: 200,
+        height: 200,
+        width: 250,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
