@@ -6,20 +6,20 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <StatusBar style="auto" />
+      <StatusBar style="auto"/>
 
       <View style={styles.containerCabecalho}>
         <Text style={styles.text1}>Open Grupo de Estudos</Text>
-        <Text style={styles.text1}>IFCE Campus Crato</Text>
-        <Text style={styles.text1}>Curso de Sistemas de Informação</Text>
+        <Text style={styles.text2}>IFCE Campus Crato</Text>
+        <Text style={styles.text2}>Curso de Sistemas de Informação</Text>
       </View>
 
       <Login />
 
       <View style={styles.containerCabecalho}>
-        <Text style={styles.text1}>Desenvolvido pela comunidade de programadores</Text>
-        <Text style={styles.text1}>Usado no IFCE Campus Crato</Text>
-        <Text style={styles.text1}>Licença MIT 2022</Text>
+        <Text style={styles.text2}>Desenvolvido pela comunidade de programadores</Text>
+        <Text style={styles.text2}>Usado no IFCE Campus Crato</Text>
+        <Text style={styles.text2}>Licença MIT 2022</Text>
       </View>
       
     </View>
@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
   },
   text1: {
     color: 'white',
+    fontSize: 24,
+  },
+  text2: {
+    color: 'silver',
   }, 
   containerCabecalho: {
     display: 'flex',
