@@ -1,11 +1,17 @@
-import { Text, View, TextInput, StyleSheet } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Button } from 'react-native';
 
 const Login = () => {
+
+    const entrarNoSistema = () => {
+        console.log("Entrando no sistema!");
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.texto1}>Entrar no sistema</Text>
             <TextInput style={styles.input} placeholder='Usuário' />
             <TextInput style={styles.input} placeholder='Senha' />
+            <Button title="Entrar" onPress={entrarNoSistema} />
         </View>
     )
 }
