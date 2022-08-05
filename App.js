@@ -1,28 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/screens/Login';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
+      <View style={styles.container}>
 
-      <StatusBar style="auto"/>
+        <StatusBar style="auto"/>
 
-      <View style={styles.containerCabecalho}>
-        <Text style={styles.text1}>Open Grupo de Estudos</Text>
-        <Text style={styles.text2}>IFCE Campus Crato</Text>
-        <Text style={styles.text2}>Curso de Sistemas de Informação</Text>
+        <View style={styles.containerCabecalho}>
+          <Text style={styles.text1}>Open Grupo de Estudos</Text>
+          <Text style={styles.text2}>IFCE Campus Crato</Text>
+          <Text style={styles.text2}>Curso de Sistemas de Informação</Text>
+        </View>
+
+        <Login />
+
+        <View style={styles.containerCabecalho}>
+          <Text style={styles.text2}>Desenvolvido pela comunidade de programadores</Text>
+          <Text style={styles.text2}>Usado no IFCE Campus Crato</Text>
+          <Text style={styles.text2}>Licença MIT 2022</Text>
+        </View>
+        
       </View>
-
-      <Login />
-
-      <View style={styles.containerCabecalho}>
-        <Text style={styles.text2}>Desenvolvido pela comunidade de programadores</Text>
-        <Text style={styles.text2}>Usado no IFCE Campus Crato</Text>
-        <Text style={styles.text2}>Licença MIT 2022</Text>
-      </View>
-      
-    </View>
+    </NavigationContainer>
   );
 }
 
