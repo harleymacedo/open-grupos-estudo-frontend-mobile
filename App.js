@@ -2,11 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/screens/Login';
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function App() {
+
+  const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
       <View style={styles.container}>
+
+      
 
         <StatusBar style="auto"/>
 
@@ -16,7 +22,9 @@ export default function App() {
           <Text style={styles.text2}>Curso de Sistemas de Informação</Text>
         </View>
 
-        <Login />
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+        </Stack.Navigator>
 
         <View style={styles.containerCabecalho}>
           <Text style={styles.text2}>Desenvolvido pela comunidade de programadores</Text>
@@ -25,6 +33,7 @@ export default function App() {
         </View>
         
       </View>
+      
     </NavigationContainer>
   );
 }
